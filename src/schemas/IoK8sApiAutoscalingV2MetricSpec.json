@@ -1,0 +1,21 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricSpec",
+    "schema": {
+      "description": "MetricSpec specifies how to scale based on a single metric (only `type` and one other matching field should be set at once).",
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "external": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.ExternalMetricSource" },
+        "resource": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.ResourceMetricSource" },
+        "containerResource": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.ContainerResourceMetricSource" },
+        "pods": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.PodsMetricSource" },
+        "type": {
+          "description": "type is the type of metric source.  It should be one of \"ContainerResource\", \"External\", \"Object\", \"Pods\" or \"Resource\", each mapping to a matching field in the object. Note: \"ContainerResource\" type is available on when the feature-gate HPAContainerMetrics is enabled",
+          "type": "string"
+        },
+        "object": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.ObjectMetricSource" }
+      }
+    }
+  }
+]

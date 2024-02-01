@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.PodDNSConfigOption",
+    "schema": {
+      "description": "PodDNSConfigOption defines DNS resolver options of a pod.",
+      "type": "object",
+      "properties": { "name": { "description": "Required.", "type": "string" }, "value": { "type": "string" } }
+    }
+  }
+]

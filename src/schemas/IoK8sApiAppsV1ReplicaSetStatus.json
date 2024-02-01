@@ -1,0 +1,46 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.apps.v1.ReplicaSetStatus",
+    "schema": {
+      "description": "ReplicaSetStatus represents the current status of a ReplicaSet.",
+      "type": "object",
+      "required": ["replicas"],
+      "properties": {
+        "fullyLabeledReplicas": {
+          "format": "int32",
+          "description": "The number of pods that have labels matching the labels of the pod template of the replicaset.",
+          "type": "integer"
+        },
+        "replicas": {
+          "format": "int32",
+          "description": "Replicas is the most recently observed number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller",
+          "type": "integer"
+        },
+        "readyReplicas": {
+          "format": "int32",
+          "description": "readyReplicas is the number of pods targeted by this ReplicaSet with a Ready Condition.",
+          "type": "integer"
+        },
+        "conditions": {
+          "x-kubernetes-patch-strategy": "merge",
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["type"],
+          "description": "Represents the latest available observations of a replica set's current state.",
+          "x-kubernetes-patch-merge-key": "type",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.apps.v1.ReplicaSetCondition" }
+        },
+        "availableReplicas": {
+          "format": "int32",
+          "description": "The number of available replicas (ready for at least minReadySeconds) for this replica set.",
+          "type": "integer"
+        },
+        "observedGeneration": {
+          "format": "int64",
+          "description": "ObservedGeneration reflects the generation of the most recently observed ReplicaSet.",
+          "type": "integer"
+        }
+      }
+    }
+  }
+]

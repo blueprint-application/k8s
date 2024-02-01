@@ -1,0 +1,31 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.apimachinery.pkg.version.Info",
+    "schema": {
+      "description": "Info contains versioning information. how we'll want to distribute that information.",
+      "type": "object",
+      "required": [
+        "buildDate",
+        "compiler",
+        "gitCommit",
+        "gitTreeState",
+        "gitVersion",
+        "goVersion",
+        "major",
+        "minor",
+        "platform"
+      ],
+      "properties": {
+        "gitVersion": { "type": "string" },
+        "gitCommit": { "type": "string" },
+        "major": { "type": "string" },
+        "minor": { "type": "string" },
+        "goVersion": { "type": "string" },
+        "buildDate": { "type": "string" },
+        "compiler": { "type": "string" },
+        "gitTreeState": { "type": "string" },
+        "platform": { "type": "string" }
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.networking.v1alpha1.IPAddressSpec",
+    "schema": {
+      "description": "IPAddressSpec describe the attributes in an IP Address.",
+      "type": "object",
+      "properties": { "parentRef": { "$ref": "#/components/schemas/io.k8s.api.networking.v1alpha1.ParentReference" } }
+    }
+  }
+]

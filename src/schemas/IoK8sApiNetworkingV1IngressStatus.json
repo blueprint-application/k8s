@@ -1,0 +1,12 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.networking.v1.IngressStatus",
+    "schema": {
+      "description": "IngressStatus describe the current state of the Ingress.",
+      "type": "object",
+      "properties": {
+        "loadBalancer": { "$ref": "#/components/schemas/io.k8s.api.networking.v1.IngressLoadBalancerStatus" }
+      }
+    }
+  }
+]

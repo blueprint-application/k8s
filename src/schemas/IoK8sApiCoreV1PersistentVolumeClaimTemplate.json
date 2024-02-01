@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.PersistentVolumeClaimTemplate",
+    "schema": {
+      "description": "PersistentVolumeClaimTemplate is used to produce PersistentVolumeClaim objects as part of an EphemeralVolumeSource.",
+      "type": "object",
+      "required": ["spec"],
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta" },
+        "spec": { "$ref": "#/components/schemas/io.k8s.api.core.v1.PersistentVolumeClaimSpec" }
+      }
+    }
+  }
+]

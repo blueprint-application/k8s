@@ -1,0 +1,8 @@
+import { IoK8sApiFlowcontrolV1beta3ExemptPriorityLevelConfigurationModelOptions as IoK8sApiFlowcontrolV1beta3ExemptPriorityLevelConfiguration } from '../IoK8sApiFlowcontrolV1beta3ExemptPriorityLevelConfiguration';
+import { IoK8sApiFlowcontrolV1beta3LimitedPriorityLevelConfigurationModelOptions as IoK8sApiFlowcontrolV1beta3LimitedPriorityLevelConfiguration } from '../IoK8sApiFlowcontrolV1beta3LimitedPriorityLevelConfiguration';
+
+export interface IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationSpecModelOptions {
+  exempt?: IoK8sApiFlowcontrolV1beta3ExemptPriorityLevelConfiguration;
+  limited?: IoK8sApiFlowcontrolV1beta3LimitedPriorityLevelConfiguration;
+  type: string;
+}

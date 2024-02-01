@@ -1,0 +1,5 @@
+import { IoK8sApiAdmissionregistrationV1alpha1ExpressionWarningModelOptions as IoK8sApiAdmissionregistrationV1alpha1ExpressionWarning } from '../IoK8sApiAdmissionregistrationV1alpha1ExpressionWarning';
+
+export interface IoK8sApiAdmissionregistrationV1alpha1TypeCheckingModelOptions {
+  expressionWarnings?: Array<IoK8sApiAdmissionregistrationV1alpha1ExpressionWarning>;
+}

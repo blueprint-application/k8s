@@ -1,0 +1,29 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.HTTPGetAction",
+    "schema": {
+      "description": "HTTPGetAction describes an action based on HTTP Get requests.",
+      "type": "object",
+      "required": ["port"],
+      "properties": {
+        "path": { "description": "Path to access on the HTTP server.", "type": "string" },
+        "scheme": { "description": "Scheme to use for connecting to the host. Defaults to HTTP.", "type": "string" },
+        "port": {
+          "format": "int-or-string",
+          "description": "IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.",
+          "type": "string"
+        },
+        "host": {
+          "description": "Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead.",
+          "type": "string"
+        },
+        "httpHeaders": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "Custom headers to set in the request. HTTP allows repeated headers.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.core.v1.HTTPHeader" }
+        }
+      }
+    }
+  }
+]

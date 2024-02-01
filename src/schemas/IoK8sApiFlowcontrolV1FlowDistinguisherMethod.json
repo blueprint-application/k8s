@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.flowcontrol.v1.FlowDistinguisherMethod",
+    "schema": {
+      "description": "FlowDistinguisherMethod specifies the method of a flow distinguisher.",
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "description": "`type` is the type of flow distinguisher method The supported types are \"ByUser\" and \"ByNamespace\". Required.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.DaemonEndpoint",
+    "schema": {
+      "description": "DaemonEndpoint contains information about a single Daemon endpoint.",
+      "type": "object",
+      "required": ["Port"],
+      "properties": {
+        "Port": { "format": "int32", "description": "Port number of the given endpoint.", "type": "integer" }
+      }
+    }
+  }
+]

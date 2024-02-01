@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v2.ExternalMetricStatus",
+    "schema": {
+      "description": "ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.",
+      "type": "object",
+      "required": ["current", "metric"],
+      "properties": {
+        "current": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricValueStatus" },
+        "metric": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricIdentifier" }
+      }
+    }
+  }
+]

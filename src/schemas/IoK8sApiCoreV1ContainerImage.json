@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.ContainerImage",
+    "schema": {
+      "description": "Describe a container image",
+      "type": "object",
+      "properties": {
+        "names": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "Names by which this image is known. e.g. [\"kubernetes.example/hyperkube:v1.0.7\", \"cloud-vendor.registry.example/cloud-vendor/hyperkube:v1.0.7\"]",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "sizeBytes": { "format": "int64", "description": "The size of the image in bytes.", "type": "integer" }
+      }
+    }
+  }
+]

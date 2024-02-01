@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.discovery.v1.EndpointHints",
+    "schema": {
+      "description": "EndpointHints provides hints describing how an endpoint should be consumed.",
+      "type": "object",
+      "properties": {
+        "forZones": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.discovery.v1.ForZone" }
+        }
+      }
+    }
+  }
+]

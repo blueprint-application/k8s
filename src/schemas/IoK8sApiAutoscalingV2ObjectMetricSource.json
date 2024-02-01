@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v2.ObjectMetricSource",
+    "schema": {
+      "description": "ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).",
+      "type": "object",
+      "required": ["describedObject", "metric", "target"],
+      "properties": {
+        "describedObject": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.CrossVersionObjectReference" },
+        "metric": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricIdentifier" },
+        "target": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricTarget" }
+      }
+    }
+  }
+]

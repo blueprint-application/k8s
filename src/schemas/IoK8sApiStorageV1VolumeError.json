@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.storage.v1.VolumeError",
+    "schema": {
+      "description": "VolumeError captures an error encountered during a volume operation.",
+      "type": "object",
+      "properties": {
+        "time": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "message": {
+          "description": "message represents the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

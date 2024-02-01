@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.batch.v1.JobTemplateSpec",
+    "schema": {
+      "description": "JobTemplateSpec describes the data a Job should have when created from a template",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta" },
+        "spec": { "$ref": "#/components/schemas/io.k8s.api.batch.v1.JobSpec" }
+      }
+    }
+  }
+]

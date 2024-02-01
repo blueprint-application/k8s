@@ -1,0 +1,71 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.PersistentVolumeSpec",
+    "schema": {
+      "description": "PersistentVolumeSpec is the specification of a persistent volume.",
+      "type": "object",
+      "properties": {
+        "claimRef": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ObjectReference" },
+        "quobyte": { "$ref": "#/components/schemas/io.k8s.api.core.v1.QuobyteVolumeSource" },
+        "azureFile": { "$ref": "#/components/schemas/io.k8s.api.core.v1.AzureFilePersistentVolumeSource" },
+        "flexVolume": { "$ref": "#/components/schemas/io.k8s.api.core.v1.FlexPersistentVolumeSource" },
+        "volumeAttributesClassName": {
+          "description": "Name of VolumeAttributesClass to which this persistent volume belongs. Empty value is not allowed. When this field is not set, it indicates that this volume does not belong to any VolumeAttributesClass. This field is mutable and can be changed by the CSI driver after a volume has been updated successfully to a new class. For an unbound PersistentVolume, the volumeAttributesClassName will be matched with unbound PersistentVolumeClaims during the binding process. This is an alpha field and requires enabling VolumeAttributesClass feature.",
+          "type": "string"
+        },
+        "mountOptions": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "mountOptions is the list of mount options, e.g. [\"ro\", \"soft\"]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "local": { "$ref": "#/components/schemas/io.k8s.api.core.v1.LocalVolumeSource" },
+        "capacity": {
+          "description": "capacity is the description of the persistent volume's resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity",
+          "additionalProperties": {
+            "description": "Quantity is a fixed-point representation of a number. It provides convenient marshaling/unmarshaling in JSON and YAML, in addition to String() and AsInt64() accessors.\n\nThe serialization format is:\n\n``` <quantity>        ::= <signedNumber><suffix>\n\n\t(Note that <suffix> may be empty, from the \"\" case in <decimalSI>.)\n\n<digit>           ::= 0 | 1 | ... | 9 <digits>          ::= <digit> | <digit><digits> <number>          ::= <digits> | <digits>.<digits> | <digits>. | .<digits> <sign>            ::= \"+\" | \"-\" <signedNumber>    ::= <number> | <sign><number> <suffix>          ::= <binarySI> | <decimalExponent> | <decimalSI> <binarySI>        ::= Ki | Mi | Gi | Ti | Pi | Ei\n\n\t(International System of units; See: http://physics.nist.gov/cuu/Units/binary.html)\n\n<decimalSI>       ::= m | \"\" | k | M | G | T | P | E\n\n\t(Note that 1024 = 1Ki but 1000 = 1k; I didn't choose the capitalization.)\n\n<decimalExponent> ::= \"e\" <signedNumber> | \"E\" <signedNumber> ```\n\nNo matter which of the three exponent forms is used, no quantity may represent a number greater than 2^63-1 in magnitude, nor may it have more than 3 decimal places. Numbers larger or more precise will be capped or rounded up. (E.g.: 0.1m will rounded up to 1m.) This may be extended in the future if we require larger or smaller quantities.\n\nWhen a Quantity is parsed from a string, it will remember the type of suffix it had, and will use the same type again when it is serialized.\n\nBefore serializing, Quantity will be put in \"canonical form\". This means that Exponent/suffix will be adjusted up or down (with a corresponding increase or decrease in Mantissa) such that:\n\n- No precision is lost - No fractional digits will be emitted - The exponent (or suffix) is as large as possible.\n\nThe sign will be omitted unless the number is negative.\n\nExamples:\n\n- 1.5 will be serialized as \"1500m\" - 1.5Gi will be serialized as \"1536Mi\"\n\nNote that the quantity will NEVER be internally represented by a floating point number. That is the whole point of this exercise.\n\nNon-canonical values will still parse as long as they are well formed, but will be re-emitted in their canonical form. (So always use canonical form, or don't diff.)\n\nThis format is intended to make it difficult to use these numbers without writing some sort of special handling code in the hopes that that will cause implementors to also use a fixed point implementation.",
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "cephfs": { "$ref": "#/components/schemas/io.k8s.api.core.v1.CephFSPersistentVolumeSource" },
+        "scaleIO": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ScaleIOPersistentVolumeSource" },
+        "accessModes": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "accessModes contains all ways the volume can be mounted. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "glusterfs": { "$ref": "#/components/schemas/io.k8s.api.core.v1.GlusterfsPersistentVolumeSource" },
+        "gcePersistentDisk": { "$ref": "#/components/schemas/io.k8s.api.core.v1.GCEPersistentDiskVolumeSource" },
+        "photonPersistentDisk": { "$ref": "#/components/schemas/io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource" },
+        "azureDisk": { "$ref": "#/components/schemas/io.k8s.api.core.v1.AzureDiskVolumeSource" },
+        "cinder": { "$ref": "#/components/schemas/io.k8s.api.core.v1.CinderPersistentVolumeSource" },
+        "awsElasticBlockStore": { "$ref": "#/components/schemas/io.k8s.api.core.v1.AWSElasticBlockStoreVolumeSource" },
+        "nodeAffinity": { "$ref": "#/components/schemas/io.k8s.api.core.v1.VolumeNodeAffinity" },
+        "flocker": { "$ref": "#/components/schemas/io.k8s.api.core.v1.FlockerVolumeSource" },
+        "volumeMode": {
+          "description": "volumeMode defines if a volume is intended to be used with a formatted filesystem or to remain in raw block state. Value of Filesystem is implied when not included in spec.",
+          "type": "string"
+        },
+        "iscsi": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ISCSIPersistentVolumeSource" },
+        "rbd": { "$ref": "#/components/schemas/io.k8s.api.core.v1.RBDPersistentVolumeSource" },
+        "storageClassName": {
+          "description": "storageClassName is the name of StorageClass to which this persistent volume belongs. Empty value means that this volume does not belong to any StorageClass.",
+          "type": "string"
+        },
+        "storageos": { "$ref": "#/components/schemas/io.k8s.api.core.v1.StorageOSPersistentVolumeSource" },
+        "csi": { "$ref": "#/components/schemas/io.k8s.api.core.v1.CSIPersistentVolumeSource" },
+        "nfs": { "$ref": "#/components/schemas/io.k8s.api.core.v1.NFSVolumeSource" },
+        "persistentVolumeReclaimPolicy": {
+          "description": "persistentVolumeReclaimPolicy defines what happens to a persistent volume when released from its claim. Valid options are Retain (default for manually created PersistentVolumes), Delete (default for dynamically provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the volume plugin underlying this PersistentVolume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming",
+          "type": "string"
+        },
+        "portworxVolume": { "$ref": "#/components/schemas/io.k8s.api.core.v1.PortworxVolumeSource" },
+        "vsphereVolume": { "$ref": "#/components/schemas/io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource" },
+        "fc": { "$ref": "#/components/schemas/io.k8s.api.core.v1.FCVolumeSource" },
+        "hostPath": { "$ref": "#/components/schemas/io.k8s.api.core.v1.HostPathVolumeSource" }
+      }
+    }
+  }
+]

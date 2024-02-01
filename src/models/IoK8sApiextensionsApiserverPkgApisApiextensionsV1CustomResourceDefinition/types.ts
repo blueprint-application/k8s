@@ -1,0 +1,11 @@
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionSpecModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionSpec } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionSpec';
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionStatusModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionStatus } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionStatus';
+import { IoK8sApimachineryPkgApisMetaV1ObjectMetaModelOptions as IoK8sApimachineryPkgApisMetaV1ObjectMeta } from '../IoK8sApimachineryPkgApisMetaV1ObjectMeta';
+
+export interface IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionModelOptions {
+  apiVersion?: string;
+  kind?: string;
+  metadata?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
+  spec: IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionSpec;
+  status?: IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionStatus;
+}

@@ -1,0 +1,5 @@
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps';
+
+export interface IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceValidationModelOptions {
+  openAPIV3Schema?: IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps;
+}

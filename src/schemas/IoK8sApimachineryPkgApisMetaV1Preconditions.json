@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Preconditions",
+    "schema": {
+      "description": "Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.",
+      "type": "object",
+      "properties": {
+        "uid": { "description": "Specifies the target UID.", "type": "string" },
+        "resourceVersion": { "description": "Specifies the target ResourceVersion", "type": "string" }
+      }
+    }
+  }
+]

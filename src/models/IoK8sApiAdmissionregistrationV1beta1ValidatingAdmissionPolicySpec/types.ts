@@ -1,0 +1,16 @@
+import { IoK8sApiAdmissionregistrationV1beta1AuditAnnotationModelOptions as IoK8sApiAdmissionregistrationV1beta1AuditAnnotation } from '../IoK8sApiAdmissionregistrationV1beta1AuditAnnotation';
+import { IoK8sApiAdmissionregistrationV1beta1MatchConditionModelOptions as IoK8sApiAdmissionregistrationV1beta1MatchCondition } from '../IoK8sApiAdmissionregistrationV1beta1MatchCondition';
+import { IoK8sApiAdmissionregistrationV1beta1MatchResourcesModelOptions as IoK8sApiAdmissionregistrationV1beta1MatchResources } from '../IoK8sApiAdmissionregistrationV1beta1MatchResources';
+import { IoK8sApiAdmissionregistrationV1beta1ParamKindModelOptions as IoK8sApiAdmissionregistrationV1beta1ParamKind } from '../IoK8sApiAdmissionregistrationV1beta1ParamKind';
+import { IoK8sApiAdmissionregistrationV1beta1ValidationModelOptions as IoK8sApiAdmissionregistrationV1beta1Validation } from '../IoK8sApiAdmissionregistrationV1beta1Validation';
+import { IoK8sApiAdmissionregistrationV1beta1VariableModelOptions as IoK8sApiAdmissionregistrationV1beta1Variable } from '../IoK8sApiAdmissionregistrationV1beta1Variable';
+
+export interface IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicySpecModelOptions {
+  auditAnnotations?: Array<IoK8sApiAdmissionregistrationV1beta1AuditAnnotation>;
+  failurePolicy?: string;
+  matchConditions?: Array<IoK8sApiAdmissionregistrationV1beta1MatchCondition>;
+  matchConstraints?: IoK8sApiAdmissionregistrationV1beta1MatchResources;
+  paramKind?: IoK8sApiAdmissionregistrationV1beta1ParamKind;
+  validations?: Array<IoK8sApiAdmissionregistrationV1beta1Validation>;
+  variables?: Array<IoK8sApiAdmissionregistrationV1beta1Variable>;
+}

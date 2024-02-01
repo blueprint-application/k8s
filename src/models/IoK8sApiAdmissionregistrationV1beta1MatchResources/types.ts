@@ -1,0 +1,10 @@
+import { IoK8sApiAdmissionregistrationV1beta1NamedRuleWithOperationsModelOptions as IoK8sApiAdmissionregistrationV1beta1NamedRuleWithOperations } from '../IoK8sApiAdmissionregistrationV1beta1NamedRuleWithOperations';
+import { IoK8sApimachineryPkgApisMetaV1LabelSelectorModelOptions as IoK8sApimachineryPkgApisMetaV1LabelSelector } from '../IoK8sApimachineryPkgApisMetaV1LabelSelector';
+
+export interface IoK8sApiAdmissionregistrationV1beta1MatchResourcesModelOptions {
+  excludeResourceRules?: Array<IoK8sApiAdmissionregistrationV1beta1NamedRuleWithOperations>;
+  matchPolicy?: string;
+  namespaceSelector?: IoK8sApimachineryPkgApisMetaV1LabelSelector;
+  objectSelector?: IoK8sApimachineryPkgApisMetaV1LabelSelector;
+  resourceRules?: Array<IoK8sApiAdmissionregistrationV1beta1NamedRuleWithOperations>;
+}

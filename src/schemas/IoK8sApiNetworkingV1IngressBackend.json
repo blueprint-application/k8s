@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.networking.v1.IngressBackend",
+    "schema": {
+      "description": "IngressBackend describes all endpoints for a given service and port.",
+      "type": "object",
+      "properties": {
+        "resource": { "$ref": "#/components/schemas/io.k8s.api.core.v1.TypedLocalObjectReference" },
+        "service": { "$ref": "#/components/schemas/io.k8s.api.networking.v1.IngressServiceBackend" }
+      }
+    }
+  }
+]

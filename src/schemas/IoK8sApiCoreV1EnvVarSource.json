@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.EnvVarSource",
+    "schema": {
+      "description": "EnvVarSource represents a source for the value of an EnvVar.",
+      "type": "object",
+      "properties": {
+        "secretKeyRef": { "$ref": "#/components/schemas/io.k8s.api.core.v1.SecretKeySelector" },
+        "resourceFieldRef": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ResourceFieldSelector" },
+        "configMapKeyRef": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ConfigMapKeySelector" },
+        "fieldRef": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ObjectFieldSelector" }
+      }
+    }
+  }
+]

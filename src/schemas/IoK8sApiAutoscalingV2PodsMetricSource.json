@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v2.PodsMetricSource",
+    "schema": {
+      "description": "PodsMetricSource indicates how to scale on a metric describing each pod in the current scale target (for example, transactions-processed-per-second). The values will be averaged together before being compared to the target value.",
+      "type": "object",
+      "required": ["metric", "target"],
+      "properties": {
+        "metric": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricIdentifier" },
+        "target": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricTarget" }
+      }
+    }
+  }
+]

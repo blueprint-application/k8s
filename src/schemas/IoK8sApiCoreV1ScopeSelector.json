@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.ScopeSelector",
+    "schema": {
+      "x-kubernetes-map-type": "atomic",
+      "description": "A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.",
+      "type": "object",
+      "properties": {
+        "matchExpressions": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "A list of scope selector requirements by scope of the resources.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ScopedResourceSelectorRequirement" }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionStatus",
+    "schema": {
+      "description": "CustomResourceDefinitionStatus indicates the state of the CustomResourceDefinition",
+      "type": "object",
+      "properties": {
+        "storedVersions": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "conditions": {
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["type"],
+          "description": "conditions indicate state for particular aspects of a CustomResourceDefinition",
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionCondition"
+          }
+        },
+        "acceptedNames": {
+          "$ref": "#/components/schemas/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionNames"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,11 @@
+import { IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicySpecModelOptions as IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicySpec } from '../IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicySpec';
+import { IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicyStatusModelOptions as IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicyStatus } from '../IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicyStatus';
+import { IoK8sApimachineryPkgApisMetaV1ObjectMetaModelOptions as IoK8sApimachineryPkgApisMetaV1ObjectMeta } from '../IoK8sApimachineryPkgApisMetaV1ObjectMeta';
+
+export interface IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicyModelOptions {
+  apiVersion?: string;
+  kind?: string;
+  metadata?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
+  spec?: IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicySpec;
+  status?: IoK8sApiAdmissionregistrationV1beta1ValidatingAdmissionPolicyStatus;
+}

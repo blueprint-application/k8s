@@ -1,0 +1,11 @@
+import { IoK8sApimachineryPkgApisMetaV1ObjectMetaModelOptions as IoK8sApimachineryPkgApisMetaV1ObjectMeta } from '../IoK8sApimachineryPkgApisMetaV1ObjectMeta';
+import { IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceSpecModelOptions as IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceSpec } from '../IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceSpec';
+import { IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceStatusModelOptions as IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceStatus } from '../IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceStatus';
+
+export interface IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceModelOptions {
+  apiVersion?: string;
+  kind?: string;
+  metadata?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
+  spec?: IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceSpec;
+  status?: IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceStatus;
+}

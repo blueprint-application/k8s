@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.batch.v1.PodFailurePolicyOnPodConditionsPattern",
+    "schema": {
+      "description": "PodFailurePolicyOnPodConditionsPattern describes a pattern for matching an actual pod condition type.",
+      "type": "object",
+      "required": ["status", "type"],
+      "properties": {
+        "type": {
+          "description": "Specifies the required Pod condition type. To match a pod condition it is required that specified type equals the pod condition type.",
+          "type": "string"
+        },
+        "status": {
+          "description": "Specifies the required Pod condition status. To match a pod condition it is required that the specified status equals the pod condition status. Defaults to True.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicySpec",
+    "schema": {
+      "description": "ValidatingAdmissionPolicySpec is the specification of the desired behavior of the AdmissionPolicy.",
+      "type": "object",
+      "properties": {
+        "variables": {
+          "x-kubernetes-patch-strategy": "merge",
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["name"],
+          "description": "Variables contain definitions of variables that can be used in composition of other expressions. Each variable is defined as a named CEL expression. The variables defined here will be available under `variables` in other expressions of the policy except MatchConditions because MatchConditions are evaluated before the rest of the policy.\n\nThe expression of a variable can refer to other variables defined earlier in the list but not those after. Thus, Variables must be sorted by the order of first appearance and acyclic.",
+          "x-kubernetes-patch-merge-key": "name",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.Variable" }
+        },
+        "paramKind": { "$ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.ParamKind" },
+        "auditAnnotations": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "auditAnnotations contains CEL expressions which are used to produce audit annotations for the audit event of the API request. validations and auditAnnotations may not both be empty; a least one of validations or auditAnnotations is required.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.AuditAnnotation" }
+        },
+        "matchConditions": {
+          "x-kubernetes-patch-strategy": "merge",
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["name"],
+          "description": "MatchConditions is a list of conditions that must be met for a request to be validated. Match conditions filter requests that have already been matched by the rules, namespaceSelector, and objectSelector. An empty list of matchConditions matches all requests. There are a maximum of 64 match conditions allowed.\n\nIf a parameter object is provided, it can be accessed via the `params` handle in the same manner as validation expressions.\n\nThe exact matching logic is (in order):\n  1. If ANY matchCondition evaluates to FALSE, the policy is skipped.\n  2. If ALL matchConditions evaluate to TRUE, the policy is evaluated.\n  3. If any matchCondition evaluates to an error (but none are FALSE):\n     - If failurePolicy=Fail, reject the request\n     - If failurePolicy=Ignore, the policy is skipped",
+          "x-kubernetes-patch-merge-key": "name",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.MatchCondition" }
+        },
+        "matchConstraints": { "$ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.MatchResources" },
+        "validations": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "Validations contain CEL expressions which is used to apply the validation. Validations and AuditAnnotations may not both be empty; a minimum of one Validations or AuditAnnotations is required.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.Validation" }
+        },
+        "failurePolicy": {
+          "description": "failurePolicy defines how to handle failures for the admission policy. Failures can occur from CEL expression parse errors, type check errors, runtime errors and invalid or mis-configured policy definitions or bindings.\n\nA policy is invalid if spec.paramKind refers to a non-existent Kind. A binding is invalid if spec.paramRef.name refers to a non-existent resource.\n\nfailurePolicy does not define how validations that evaluate to false are handled.\n\nWhen failurePolicy is set to Fail, ValidatingAdmissionPolicyBinding validationActions define how failures are enforced.\n\nAllowed values are Ignore or Fail. Defaults to Fail.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

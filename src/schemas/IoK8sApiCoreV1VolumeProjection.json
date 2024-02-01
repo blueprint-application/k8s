@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.VolumeProjection",
+    "schema": {
+      "description": "Projection that may be projected along with other supported volume types",
+      "type": "object",
+      "properties": {
+        "downwardAPI": { "$ref": "#/components/schemas/io.k8s.api.core.v1.DownwardAPIProjection" },
+        "configMap": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ConfigMapProjection" },
+        "secret": { "$ref": "#/components/schemas/io.k8s.api.core.v1.SecretProjection" },
+        "serviceAccountToken": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ServiceAccountTokenProjection" },
+        "clusterTrustBundle": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ClusterTrustBundleProjection" }
+      }
+    }
+  }
+]

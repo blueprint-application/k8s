@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.ExternalDocumentation",
+    "schema": {
+      "description": "ExternalDocumentation allows referencing an external resource for extended documentation.",
+      "type": "object",
+      "properties": { "description": { "type": "string" }, "url": { "type": "string" } }
+    }
+  }
+]

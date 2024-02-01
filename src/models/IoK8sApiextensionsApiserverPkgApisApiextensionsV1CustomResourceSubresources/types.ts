@@ -1,0 +1,6 @@
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourceScaleModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourceScale } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourceScale';
+
+export interface IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourcesModelOptions {
+  scale?: IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourceScale;
+  status?: any;
+}

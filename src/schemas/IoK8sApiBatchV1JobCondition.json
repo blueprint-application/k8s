@@ -1,0 +1,29 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.batch.v1.JobCondition",
+    "schema": {
+      "description": "JobCondition describes current state of a job.",
+      "type": "object",
+      "required": ["status", "type"],
+      "properties": {
+        "reason": { "description": "(brief) reason for the condition's last transition.", "type": "string" },
+        "lastTransitionTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "message": {
+          "description": "Human readable message indicating details about last transition.",
+          "type": "string"
+        },
+        "type": { "description": "Type of job condition, Complete or Failed.", "type": "string" },
+        "lastProbeTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "status": { "description": "Status of the condition, one of True, False, Unknown.", "type": "string" }
+      }
+    }
+  }
+]

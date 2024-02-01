@@ -1,0 +1,6 @@
+import { IoK8sApiCertificatesV1CertificateSigningRequestConditionModelOptions as IoK8sApiCertificatesV1CertificateSigningRequestCondition } from '../IoK8sApiCertificatesV1CertificateSigningRequestCondition';
+
+export interface IoK8sApiCertificatesV1CertificateSigningRequestStatusModelOptions {
+  certificate?: string;
+  conditions?: Array<IoK8sApiCertificatesV1CertificateSigningRequestCondition>;
+}

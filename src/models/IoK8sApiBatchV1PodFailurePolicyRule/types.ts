@@ -1,0 +1,8 @@
+import { IoK8sApiBatchV1PodFailurePolicyOnExitCodesRequirementModelOptions as IoK8sApiBatchV1PodFailurePolicyOnExitCodesRequirement } from '../IoK8sApiBatchV1PodFailurePolicyOnExitCodesRequirement';
+import { IoK8sApiBatchV1PodFailurePolicyOnPodConditionsPatternModelOptions as IoK8sApiBatchV1PodFailurePolicyOnPodConditionsPattern } from '../IoK8sApiBatchV1PodFailurePolicyOnPodConditionsPattern';
+
+export interface IoK8sApiBatchV1PodFailurePolicyRuleModelOptions {
+  action: string;
+  onExitCodes?: IoK8sApiBatchV1PodFailurePolicyOnExitCodesRequirement;
+  onPodConditions?: Array<IoK8sApiBatchV1PodFailurePolicyOnPodConditionsPattern>;
+}

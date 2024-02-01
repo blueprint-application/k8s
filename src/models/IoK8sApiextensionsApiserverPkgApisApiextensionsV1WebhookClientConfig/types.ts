@@ -1,0 +1,7 @@
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1ServiceReferenceModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1ServiceReference } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1ServiceReference';
+
+export interface IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookClientConfigModelOptions {
+  caBundle?: string;
+  service?: IoK8sApiextensionsApiserverPkgApisApiextensionsV1ServiceReference;
+  url?: string;
+}

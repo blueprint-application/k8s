@@ -1,0 +1,47 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.Volume",
+    "schema": {
+      "description": "Volume represents a named volume in a pod that may be accessed by any container in the pod.",
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "quobyte": { "$ref": "#/components/schemas/io.k8s.api.core.v1.QuobyteVolumeSource" },
+        "azureFile": { "$ref": "#/components/schemas/io.k8s.api.core.v1.AzureFileVolumeSource" },
+        "flexVolume": { "$ref": "#/components/schemas/io.k8s.api.core.v1.FlexVolumeSource" },
+        "ephemeral": { "$ref": "#/components/schemas/io.k8s.api.core.v1.EphemeralVolumeSource" },
+        "secret": { "$ref": "#/components/schemas/io.k8s.api.core.v1.SecretVolumeSource" },
+        "projected": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ProjectedVolumeSource" },
+        "cephfs": { "$ref": "#/components/schemas/io.k8s.api.core.v1.CephFSVolumeSource" },
+        "scaleIO": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ScaleIOVolumeSource" },
+        "emptyDir": { "$ref": "#/components/schemas/io.k8s.api.core.v1.EmptyDirVolumeSource" },
+        "glusterfs": { "$ref": "#/components/schemas/io.k8s.api.core.v1.GlusterfsVolumeSource" },
+        "gcePersistentDisk": { "$ref": "#/components/schemas/io.k8s.api.core.v1.GCEPersistentDiskVolumeSource" },
+        "photonPersistentDisk": { "$ref": "#/components/schemas/io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource" },
+        "azureDisk": { "$ref": "#/components/schemas/io.k8s.api.core.v1.AzureDiskVolumeSource" },
+        "cinder": { "$ref": "#/components/schemas/io.k8s.api.core.v1.CinderVolumeSource" },
+        "downwardAPI": { "$ref": "#/components/schemas/io.k8s.api.core.v1.DownwardAPIVolumeSource" },
+        "awsElasticBlockStore": { "$ref": "#/components/schemas/io.k8s.api.core.v1.AWSElasticBlockStoreVolumeSource" },
+        "flocker": { "$ref": "#/components/schemas/io.k8s.api.core.v1.FlockerVolumeSource" },
+        "iscsi": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ISCSIVolumeSource" },
+        "rbd": { "$ref": "#/components/schemas/io.k8s.api.core.v1.RBDVolumeSource" },
+        "configMap": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ConfigMapVolumeSource" },
+        "storageos": { "$ref": "#/components/schemas/io.k8s.api.core.v1.StorageOSVolumeSource" },
+        "csi": { "$ref": "#/components/schemas/io.k8s.api.core.v1.CSIVolumeSource" },
+        "name": {
+          "description": "name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names",
+          "type": "string"
+        },
+        "nfs": { "$ref": "#/components/schemas/io.k8s.api.core.v1.NFSVolumeSource" },
+        "persistentVolumeClaim": {
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.PersistentVolumeClaimVolumeSource"
+        },
+        "gitRepo": { "$ref": "#/components/schemas/io.k8s.api.core.v1.GitRepoVolumeSource" },
+        "portworxVolume": { "$ref": "#/components/schemas/io.k8s.api.core.v1.PortworxVolumeSource" },
+        "vsphereVolume": { "$ref": "#/components/schemas/io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource" },
+        "fc": { "$ref": "#/components/schemas/io.k8s.api.core.v1.FCVolumeSource" },
+        "hostPath": { "$ref": "#/components/schemas/io.k8s.api.core.v1.HostPathVolumeSource" }
+      }
+    }
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.policy.v1.PodDisruptionBudgetList",
+    "schema": {
+      "x-kubernetes-group-version-kind": [{ "kind": "PodDisruptionBudgetList", "version": "v1", "group": "policy" }],
+      "description": "PodDisruptionBudgetList is a collection of PodDisruptionBudgets.",
+      "type": "object",
+      "required": ["items"],
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta" },
+        "apiVersion": {
+          "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+          "type": "string"
+        },
+        "kind": {
+          "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+          "type": "string"
+        },
+        "items": {
+          "description": "Items is a list of PodDisruptionBudgets",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.policy.v1.PodDisruptionBudget" }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+import { IoK8sApiFlowcontrolV1beta3FlowDistinguisherMethodModelOptions as IoK8sApiFlowcontrolV1beta3FlowDistinguisherMethod } from '../IoK8sApiFlowcontrolV1beta3FlowDistinguisherMethod';
+import { IoK8sApiFlowcontrolV1beta3PolicyRulesWithSubjectsModelOptions as IoK8sApiFlowcontrolV1beta3PolicyRulesWithSubjects } from '../IoK8sApiFlowcontrolV1beta3PolicyRulesWithSubjects';
+import { IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationReferenceModelOptions as IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationReference } from '../IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationReference';
+
+export interface IoK8sApiFlowcontrolV1beta3FlowSchemaSpecModelOptions {
+  distinguisherMethod?: IoK8sApiFlowcontrolV1beta3FlowDistinguisherMethod;
+  matchingPrecedence?: number;
+  priorityLevelConfiguration: IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationReference;
+  rules?: Array<IoK8sApiFlowcontrolV1beta3PolicyRulesWithSubjects>;
+}

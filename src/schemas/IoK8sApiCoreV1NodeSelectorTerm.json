@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.NodeSelectorTerm",
+    "schema": {
+      "x-kubernetes-map-type": "atomic",
+      "description": "A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.",
+      "type": "object",
+      "properties": {
+        "matchExpressions": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "A list of node selector requirements by node's labels.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.core.v1.NodeSelectorRequirement" }
+        },
+        "matchFields": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "A list of node selector requirements by node's fields.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.core.v1.NodeSelectorRequirement" }
+        }
+      }
+    }
+  }
+]

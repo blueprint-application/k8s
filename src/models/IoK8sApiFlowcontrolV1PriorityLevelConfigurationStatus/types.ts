@@ -1,0 +1,5 @@
+import { IoK8sApiFlowcontrolV1PriorityLevelConfigurationConditionModelOptions as IoK8sApiFlowcontrolV1PriorityLevelConfigurationCondition } from '../IoK8sApiFlowcontrolV1PriorityLevelConfigurationCondition';
+
+export interface IoK8sApiFlowcontrolV1PriorityLevelConfigurationStatusModelOptions {
+  conditions?: Array<IoK8sApiFlowcontrolV1PriorityLevelConfigurationCondition>;
+}

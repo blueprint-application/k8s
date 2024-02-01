@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v2.PodsMetricStatus",
+    "schema": {
+      "description": "PodsMetricStatus indicates the current value of a metric describing each pod in the current scale target (for example, transactions-processed-per-second).",
+      "type": "object",
+      "required": ["current", "metric"],
+      "properties": {
+        "current": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricValueStatus" },
+        "metric": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricIdentifier" }
+      }
+    }
+  }
+]

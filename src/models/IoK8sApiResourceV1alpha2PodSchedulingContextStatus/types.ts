@@ -1,0 +1,5 @@
+import { IoK8sApiResourceV1alpha2ResourceClaimSchedulingStatusModelOptions as IoK8sApiResourceV1alpha2ResourceClaimSchedulingStatus } from '../IoK8sApiResourceV1alpha2ResourceClaimSchedulingStatus';
+
+export interface IoK8sApiResourceV1alpha2PodSchedulingContextStatusModelOptions {
+  resourceClaims?: Array<IoK8sApiResourceV1alpha2ResourceClaimSchedulingStatus>;
+}

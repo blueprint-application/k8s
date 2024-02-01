@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v1.ScaleSpec",
+    "schema": {
+      "description": "ScaleSpec describes the attributes of a scale subresource.",
+      "type": "object",
+      "properties": {
+        "replicas": {
+          "format": "int32",
+          "description": "replicas is the desired number of instances for the scaled object.",
+          "type": "integer"
+        }
+      }
+    }
+  }
+]

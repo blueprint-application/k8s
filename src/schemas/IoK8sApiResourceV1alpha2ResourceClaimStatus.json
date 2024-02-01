@@ -1,0 +1,29 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.resource.v1alpha2.ResourceClaimStatus",
+    "schema": {
+      "description": "ResourceClaimStatus tracks whether the resource has been allocated and what the resulting attributes are.",
+      "type": "object",
+      "properties": {
+        "allocation": { "$ref": "#/components/schemas/io.k8s.api.resource.v1alpha2.AllocationResult" },
+        "reservedFor": {
+          "x-kubernetes-patch-strategy": "merge",
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["uid"],
+          "description": "ReservedFor indicates which entities are currently allowed to use the claim. A Pod which references a ResourceClaim which is not reserved for that Pod will not be started.\n\nThere can be at most 32 such reservations. This may get increased in the future, but not reduced.",
+          "x-kubernetes-patch-merge-key": "uid",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.resource.v1alpha2.ResourceClaimConsumerReference" }
+        },
+        "driverName": {
+          "description": "DriverName is a copy of the driver name from the ResourceClass at the time when allocation started.",
+          "type": "string"
+        },
+        "deallocationRequested": {
+          "description": "DeallocationRequested indicates that a ResourceClaim is to be deallocated.\n\nThe driver then must deallocate this claim and reset the field together with clearing the Allocation field.\n\nWhile DeallocationRequested is set, no new consumers may be added to ReservedFor.",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+]

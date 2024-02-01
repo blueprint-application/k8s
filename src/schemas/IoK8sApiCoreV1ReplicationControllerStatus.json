@@ -1,0 +1,46 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.ReplicationControllerStatus",
+    "schema": {
+      "description": "ReplicationControllerStatus represents the current status of a replication controller.",
+      "type": "object",
+      "required": ["replicas"],
+      "properties": {
+        "fullyLabeledReplicas": {
+          "format": "int32",
+          "description": "The number of pods that have labels matching the labels of the pod template of the replication controller.",
+          "type": "integer"
+        },
+        "replicas": {
+          "format": "int32",
+          "description": "Replicas is the most recently observed number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller",
+          "type": "integer"
+        },
+        "readyReplicas": {
+          "format": "int32",
+          "description": "The number of ready replicas for this replication controller.",
+          "type": "integer"
+        },
+        "conditions": {
+          "x-kubernetes-patch-strategy": "merge",
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["type"],
+          "description": "Represents the latest available observations of a replication controller's current state.",
+          "x-kubernetes-patch-merge-key": "type",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ReplicationControllerCondition" }
+        },
+        "availableReplicas": {
+          "format": "int32",
+          "description": "The number of available replicas (ready for at least minReadySeconds) for this replication controller.",
+          "type": "integer"
+        },
+        "observedGeneration": {
+          "format": "int64",
+          "description": "ObservedGeneration reflects the generation of the most recently observed replication controller.",
+          "type": "integer"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.apps.v1.DaemonSetSpec",
+    "schema": {
+      "description": "DaemonSetSpec is the specification of a daemon set.",
+      "type": "object",
+      "required": ["selector", "template"],
+      "properties": {
+        "template": { "$ref": "#/components/schemas/io.k8s.api.core.v1.PodTemplateSpec" },
+        "updateStrategy": { "$ref": "#/components/schemas/io.k8s.api.apps.v1.DaemonSetUpdateStrategy" },
+        "revisionHistoryLimit": {
+          "format": "int32",
+          "description": "The number of old history to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. Defaults to 10.",
+          "type": "integer"
+        },
+        "selector": { "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector" },
+        "minReadySeconds": {
+          "format": "int32",
+          "description": "The minimum number of seconds for which a newly created DaemonSet pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready).",
+          "type": "integer"
+        }
+      }
+    }
+  }
+]

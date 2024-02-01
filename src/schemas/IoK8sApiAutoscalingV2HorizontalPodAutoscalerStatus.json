@@ -1,0 +1,47 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerStatus",
+    "schema": {
+      "description": "HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.",
+      "type": "object",
+      "required": ["desiredReplicas"],
+      "properties": {
+        "desiredReplicas": {
+          "format": "int32",
+          "description": "desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.",
+          "type": "integer"
+        },
+        "currentReplicas": {
+          "format": "int32",
+          "description": "currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.",
+          "type": "integer"
+        },
+        "conditions": {
+          "x-kubernetes-patch-strategy": "merge",
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["type"],
+          "description": "conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.",
+          "x-kubernetes-patch-merge-key": "type",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerCondition" }
+        },
+        "lastScaleTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "observedGeneration": {
+          "format": "int64",
+          "description": "observedGeneration is the most recent generation observed by this autoscaler.",
+          "type": "integer"
+        },
+        "currentMetrics": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "currentMetrics is the last read state of the metrics used by this autoscaler.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.MetricStatus" }
+        }
+      }
+    }
+  }
+]

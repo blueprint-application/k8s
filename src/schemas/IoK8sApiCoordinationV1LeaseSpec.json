@@ -1,0 +1,35 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.coordination.v1.LeaseSpec",
+    "schema": {
+      "description": "LeaseSpec is a specification of a Lease.",
+      "type": "object",
+      "properties": {
+        "renewTime": {
+          "format": "date-time",
+          "description": "MicroTime is version of Time with microsecond level precision.",
+          "type": "string"
+        },
+        "leaseDurationSeconds": {
+          "format": "int32",
+          "description": "leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed renewTime.",
+          "type": "integer"
+        },
+        "leaseTransitions": {
+          "format": "int32",
+          "description": "leaseTransitions is the number of transitions of a lease between holders.",
+          "type": "integer"
+        },
+        "acquireTime": {
+          "format": "date-time",
+          "description": "MicroTime is version of Time with microsecond level precision.",
+          "type": "string"
+        },
+        "holderIdentity": {
+          "description": "holderIdentity contains the identity of the holder of a current lease.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

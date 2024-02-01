@@ -1,0 +1,14 @@
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceColumnDefinitionModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceColumnDefinition } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceColumnDefinition';
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourcesModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresources } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresources';
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceValidationModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceValidation } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceValidation';
+
+export interface IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionVersionModelOptions {
+  additionalPrinterColumns?: Array<IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceColumnDefinition>;
+  deprecated?: boolean;
+  deprecationWarning?: string;
+  name: string;
+  schema?: IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceValidation;
+  served: boolean;
+  storage: boolean;
+  subresources?: IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresources;
+}

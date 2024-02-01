@@ -1,0 +1,23 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.storage.v1.VolumeAttachmentStatus",
+    "schema": {
+      "description": "VolumeAttachmentStatus is the status of a VolumeAttachment request.",
+      "type": "object",
+      "required": ["attached"],
+      "properties": {
+        "attachmentMetadata": {
+          "description": "attachmentMetadata is populated with any information returned by the attach operation, upon successful attach, that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.",
+          "additionalProperties": { "type": "string" },
+          "type": "object"
+        },
+        "detachError": { "$ref": "#/components/schemas/io.k8s.api.storage.v1.VolumeError" },
+        "attachError": { "$ref": "#/components/schemas/io.k8s.api.storage.v1.VolumeError" },
+        "attached": {
+          "description": "attached indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+]

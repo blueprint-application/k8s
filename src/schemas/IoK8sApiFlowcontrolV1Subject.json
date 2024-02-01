@@ -1,0 +1,25 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.flowcontrol.v1.Subject",
+    "schema": {
+      "x-kubernetes-unions": [
+        {
+          "fields-to-discriminateBy": { "serviceAccount": "ServiceAccount", "user": "User", "group": "Group" },
+          "discriminator": "kind"
+        }
+      ],
+      "description": "Subject matches the originator of a request, as identified by the request authentication system. There are three ways of matching an originator; by user, group, or service account.",
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "description": "`kind` indicates which one of the other fields is non-empty. Required",
+          "type": "string"
+        },
+        "serviceAccount": { "$ref": "#/components/schemas/io.k8s.api.flowcontrol.v1.ServiceAccountSubject" },
+        "user": { "$ref": "#/components/schemas/io.k8s.api.flowcontrol.v1.UserSubject" },
+        "group": { "$ref": "#/components/schemas/io.k8s.api.flowcontrol.v1.GroupSubject" }
+      }
+    }
+  }
+]

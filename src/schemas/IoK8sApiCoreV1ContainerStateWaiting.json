@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.ContainerStateWaiting",
+    "schema": {
+      "description": "ContainerStateWaiting is a waiting state of a container.",
+      "type": "object",
+      "properties": {
+        "reason": { "description": "(brief) reason the container is not yet running.", "type": "string" },
+        "message": { "description": "Message regarding why the container is not yet running.", "type": "string" }
+      }
+    }
+  }
+]

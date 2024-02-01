@@ -1,0 +1,19 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.TopologySelectorLabelRequirement",
+    "schema": {
+      "description": "A topology selector requirement is a selector that matches given label. This is an alpha feature and may change in the future.",
+      "type": "object",
+      "required": ["key", "values"],
+      "properties": {
+        "values": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "An array of string values. One value must match the label to be selected. Each entry in Values is ORed.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "key": { "description": "The label key that the selector applies to.", "type": "string" }
+      }
+    }
+  }
+]

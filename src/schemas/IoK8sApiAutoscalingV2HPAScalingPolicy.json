@@ -1,0 +1,23 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v2.HPAScalingPolicy",
+    "schema": {
+      "description": "HPAScalingPolicy is a single policy which must hold true for a specified past interval.",
+      "type": "object",
+      "required": ["periodSeconds", "type", "value"],
+      "properties": {
+        "periodSeconds": {
+          "format": "int32",
+          "description": "periodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).",
+          "type": "integer"
+        },
+        "type": { "description": "type is used to specify the scaling policy.", "type": "string" },
+        "value": {
+          "format": "int32",
+          "description": "value contains the amount of change which is permitted by the policy. It must be greater than zero",
+          "type": "integer"
+        }
+      }
+    }
+  }
+]

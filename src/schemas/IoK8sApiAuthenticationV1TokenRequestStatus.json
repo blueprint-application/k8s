@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenRequestStatus",
+    "schema": {
+      "description": "TokenRequestStatus is the result of a token request.",
+      "type": "object",
+      "required": ["expirationTimestamp", "token"],
+      "properties": {
+        "expirationTimestamp": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "token": { "description": "Token is the opaque bearer token.", "type": "string" }
+      }
+    }
+  }
+]

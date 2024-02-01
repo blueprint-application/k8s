@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.networking.v1.NetworkPolicyPeer",
+    "schema": {
+      "description": "NetworkPolicyPeer describes a peer to allow traffic to/from. Only certain combinations of fields are allowed",
+      "type": "object",
+      "properties": {
+        "podSelector": { "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector" },
+        "ipBlock": { "$ref": "#/components/schemas/io.k8s.api.networking.v1.IPBlock" },
+        "namespaceSelector": { "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector" }
+      }
+    }
+  }
+]

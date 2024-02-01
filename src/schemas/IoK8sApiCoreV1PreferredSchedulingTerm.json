@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.PreferredSchedulingTerm",
+    "schema": {
+      "description": "An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).",
+      "type": "object",
+      "required": ["preference", "weight"],
+      "properties": {
+        "preference": { "$ref": "#/components/schemas/io.k8s.api.core.v1.NodeSelectorTerm" },
+        "weight": {
+          "format": "int32",
+          "description": "Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.",
+          "type": "integer"
+        }
+      }
+    }
+  }
+]

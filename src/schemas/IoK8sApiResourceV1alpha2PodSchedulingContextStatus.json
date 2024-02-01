@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.resource.v1alpha2.PodSchedulingContextStatus",
+    "schema": {
+      "description": "PodSchedulingContextStatus describes where resources for the Pod can be allocated.",
+      "type": "object",
+      "properties": {
+        "resourceClaims": {
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["name"],
+          "description": "ResourceClaims describes resource availability for each pod.spec.resourceClaim entry where the corresponding ResourceClaim uses \"WaitForFirstConsumer\" allocation mode.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.api.resource.v1alpha2.ResourceClaimSchedulingStatus" }
+        }
+      }
+    }
+  }
+]

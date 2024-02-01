@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicyStatus",
+    "schema": {
+      "description": "ValidatingAdmissionPolicyStatus represents the status of an admission validation policy.",
+      "type": "object",
+      "properties": {
+        "typeChecking": { "$ref": "#/components/schemas/io.k8s.api.admissionregistration.v1beta1.TypeChecking" },
+        "conditions": {
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-list-map-keys": ["type"],
+          "description": "The conditions represent the latest available observations of a policy's current state.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Condition" }
+        },
+        "observedGeneration": {
+          "format": "int64",
+          "description": "The generation observed by the controller.",
+          "type": "integer"
+        }
+      }
+    }
+  }
+]

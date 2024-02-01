@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerBehavior",
+    "schema": {
+      "description": "HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively).",
+      "type": "object",
+      "properties": {
+        "scaleUp": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.HPAScalingRules" },
+        "scaleDown": { "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2.HPAScalingRules" }
+      }
+    }
+  }
+]

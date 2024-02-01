@@ -1,0 +1,70 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.events.v1.Event",
+    "schema": {
+      "x-kubernetes-group-version-kind": [{ "kind": "Event", "version": "v1", "group": "events.k8s.io" }],
+      "description": "Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system. Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.",
+      "type": "object",
+      "required": ["eventTime"],
+      "properties": {
+        "note": {
+          "description": "note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.",
+          "type": "string"
+        },
+        "reason": {
+          "description": "reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.",
+          "type": "string"
+        },
+        "metadata": { "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta" },
+        "reportingInstance": {
+          "description": "reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.",
+          "type": "string"
+        },
+        "deprecatedCount": {
+          "format": "int32",
+          "description": "deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.",
+          "type": "integer"
+        },
+        "kind": {
+          "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+          "type": "string"
+        },
+        "deprecatedSource": { "$ref": "#/components/schemas/io.k8s.api.core.v1.EventSource" },
+        "type": {
+          "description": "type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.",
+          "type": "string"
+        },
+        "deprecatedLastTimestamp": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "regarding": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ObjectReference" },
+        "deprecatedFirstTimestamp": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "apiVersion": {
+          "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+          "type": "string"
+        },
+        "reportingController": {
+          "description": "reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.",
+          "type": "string"
+        },
+        "related": { "$ref": "#/components/schemas/io.k8s.api.core.v1.ObjectReference" },
+        "series": { "$ref": "#/components/schemas/io.k8s.api.events.v1.EventSeries" },
+        "eventTime": {
+          "format": "date-time",
+          "description": "MicroTime is version of Time with microsecond level precision.",
+          "type": "string"
+        },
+        "action": {
+          "description": "action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

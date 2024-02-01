@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.PodReadinessGate",
+    "schema": {
+      "description": "PodReadinessGate contains the reference to a pod condition",
+      "type": "object",
+      "required": ["conditionType"],
+      "properties": {
+        "conditionType": {
+          "description": "ConditionType refers to a condition in the pod's condition list with matching type.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,6 @@
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookClientConfigModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookClientConfig } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookClientConfig';
+
+export interface IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookConversionModelOptions {
+  clientConfig?: IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookClientConfig;
+  conversionReviewVersions: Array<string>;
+}

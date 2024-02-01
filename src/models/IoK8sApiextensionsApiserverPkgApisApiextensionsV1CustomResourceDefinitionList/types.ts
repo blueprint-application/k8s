@@ -1,0 +1,9 @@
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionModelOptions as IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition } from '../IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition';
+import { IoK8sApimachineryPkgApisMetaV1ListMetaModelOptions as IoK8sApimachineryPkgApisMetaV1ListMeta } from '../IoK8sApimachineryPkgApisMetaV1ListMeta';
+
+export interface IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionListModelOptions {
+  apiVersion?: string;
+  items: Array<IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition>;
+  kind?: string;
+  metadata?: IoK8sApimachineryPkgApisMetaV1ListMeta;
+}

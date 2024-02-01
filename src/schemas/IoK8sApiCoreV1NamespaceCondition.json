@@ -1,0 +1,21 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.NamespaceCondition",
+    "schema": {
+      "description": "NamespaceCondition contains details about state of namespace.",
+      "type": "object",
+      "required": ["status", "type"],
+      "properties": {
+        "reason": { "type": "string" },
+        "lastTransitionTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "message": { "type": "string" },
+        "type": { "description": "Type of namespace controller condition.", "type": "string" },
+        "status": { "description": "Status of the condition, one of True, False, Unknown.", "type": "string" }
+      }
+    }
+  }
+]

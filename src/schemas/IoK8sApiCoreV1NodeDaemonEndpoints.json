@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.NodeDaemonEndpoints",
+    "schema": {
+      "description": "NodeDaemonEndpoints lists ports opened by daemons running on the Node.",
+      "type": "object",
+      "properties": { "kubeletEndpoint": { "$ref": "#/components/schemas/io.k8s.api.core.v1.DaemonEndpoint" } }
+    }
+  }
+]

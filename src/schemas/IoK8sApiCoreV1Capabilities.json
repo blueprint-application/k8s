@@ -1,0 +1,23 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.Capabilities",
+    "schema": {
+      "description": "Adds and removes POSIX capabilities from running containers.",
+      "type": "object",
+      "properties": {
+        "add": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "Added capabilities",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "drop": {
+          "x-kubernetes-list-type": "atomic",
+          "description": "Removed capabilities",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+]

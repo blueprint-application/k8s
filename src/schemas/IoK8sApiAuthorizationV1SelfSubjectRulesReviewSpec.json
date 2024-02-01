@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReviewSpec",
+    "schema": {
+      "description": "SelfSubjectRulesReviewSpec defines the specification for SelfSubjectRulesReview.",
+      "type": "object",
+      "properties": { "namespace": { "description": "Namespace to evaluate rules for. Required.", "type": "string" } }
+    }
+  }
+]

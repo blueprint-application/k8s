@@ -1,0 +1,29 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.apiserverinternal.v1alpha1.StorageVersionCondition",
+    "schema": {
+      "description": "Describes the state of the storageVersion at a certain point.",
+      "type": "object",
+      "required": ["reason", "status", "type"],
+      "properties": {
+        "reason": { "description": "The reason for the condition's last transition.", "type": "string" },
+        "lastTransitionTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+          "type": "string"
+        },
+        "message": {
+          "description": "A human readable message indicating details about the transition.",
+          "type": "string"
+        },
+        "type": { "description": "Type of the condition.", "type": "string" },
+        "observedGeneration": {
+          "format": "int64",
+          "description": "If set, this represents the .metadata.generation that the condition was set based upon.",
+          "type": "integer"
+        },
+        "status": { "description": "Status of the condition, one of True, False, Unknown.", "type": "string" }
+      }
+    }
+  }
+]

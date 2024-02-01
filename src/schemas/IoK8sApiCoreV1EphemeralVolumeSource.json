@@ -1,0 +1,12 @@
+[
+  {
+    "ref": "#/components/schemas/io.k8s.api.core.v1.EphemeralVolumeSource",
+    "schema": {
+      "description": "Represents an ephemeral volume that is handled by a normal storage driver.",
+      "type": "object",
+      "properties": {
+        "volumeClaimTemplate": { "$ref": "#/components/schemas/io.k8s.api.core.v1.PersistentVolumeClaimTemplate" }
+      }
+    }
+  }
+]
